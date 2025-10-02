@@ -21,7 +21,38 @@ public class FullNameApplication {
         System.out.print("Enter Suffix: ");
         suffix = scanner.nextLine();
 
-        System.out.println("Full Name: " + firstName + " " + middleName + " " + lastName + " " + suffix);
+        String fullName = firstName.trim(); // in case they entered "   Coral    "
+
+        if (!middleName.isBlank()) {    //is blank
+            fullName = fullName + " " + middleName.trim() +" ";
+        }
+
+        fullName = fullName + lastName;
+
+        if (!suffix.isBlank()) {
+            fullName = fullName + ", " + suffix.trim();
+        }
+        System.out.println(fullName);
+
+
+
+
 
     }
+
+    public FullNameApplication() {
+
+
+    }
+
+    public  void doSomething() {
+
+
+    }
+
+    public static void something() {
+
+
+    }
+
 }
